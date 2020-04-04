@@ -1,0 +1,8 @@
+<button (click)="fetchCourseDetails()">getCourseDetails</button>
+<ul>
+    <li *ngFor="let course of courseDetails">
+        {{course.name}}
+        {{course.id}}
+        {{course.description}}
+    </li>
+</ul>
