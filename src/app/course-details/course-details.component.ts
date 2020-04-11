@@ -7,6 +7,7 @@ import {CourseService} from '..//course.service'
 })
 export class CourseDetailsComponent implements OnInit {
 courseDetails
+displayedColumns: string[] = ['id','name'];
   constructor(private courseService:CourseService) { }
 
   ngOnInit() {

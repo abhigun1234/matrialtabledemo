@@ -7,6 +7,7 @@ import {CourseService} from '..//course.service'
 })
 export class CourselistComponent implements OnInit {
  courseDetails;
+ data:any;
   constructor(private courseService:CourseService) { }
 
   ngOnInit() {
@@ -16,6 +17,12 @@ export class CourselistComponent implements OnInit {
   {
 
    this.courseDetails=this.courseService.getCourseDetails()
+
+  }
+
+  reciveDataFromcomponent()
+  {
+   this.data=this.courseService.getData()
 
   }
 

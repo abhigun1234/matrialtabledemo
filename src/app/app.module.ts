@@ -7,7 +7,7 @@ import { CourseinfoComponent } from './courseinfo/courseinfo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CourselistComponent } from './courselist/courselist.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
-
+import { MatTableModule } from "@angular/material";
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +18,8 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
