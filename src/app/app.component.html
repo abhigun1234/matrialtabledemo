@@ -1,2 +1,25 @@
-<app-courseinfo></app-courseinfo>
-<app-courselist></app-courselist>
+<mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource">
+    
+      <ng-container matColumnDef="Id">
+          <div *matHeaderCellDef>Id</div>
+          <div *matCellDef="let course">{{course.Id}}</div>
+      </ng-container>
+    
+      <ng-container matColumnDef="name">
+          <div *matHeaderCellDef>Name</div>
+          <div class="description-cell"
+                    *matCellDef="let course">{{course.name}}</div>
+      </ng-container>
+    
+      <ng-container matColumnDef="fees">
+          <div *matHeaderCellDef>Fees</div>
+          <div class="duration-cell"
+                    *matCellDef="let lesson">{{lesson.fees}}</div>
+      </ng-container>
+      
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      
+  </mat-table>
+  <!-- <app-courseinfo></app-courseinfo> -->

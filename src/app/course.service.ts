@@ -1,21 +1,20 @@
 import { Injectable } from '@angular/core';
-
+import {HttpClient} from '@angular/common/http'
 @Injectable({
   providedIn: 'root'
 })
 export class CourseService {
 
   mydata:any
-courseDetails=[{"name":"Angular","id":"1","description":"ui"},
-  {"name":"React","id":"2","description":"ui"},
-  {"name":"Node Js","id":"3","description":"ui"}
-  ]//https://github.com/abhigun1234/matrialtabledemo.git
-  constructor() { }
+
+  constructor(private _httpClient:HttpClient) { }
 
  public getCourseDetails()
  {
 
-   return this.courseDetails;
+   
+
+   return this._httpClient.get('https://dronaonlineadmin.herokuapp.com/courses/')
  }
  public setData(data:any)
  { console.log("data",data)

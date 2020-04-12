@@ -1,3 +1,8 @@
+<label>show course data</label>
+<ul>
 
-<input type="text" #data>
-<button (click)="sendData(data.value)">senData</button>
+    <li  *ngFor="let course of courseList">
+
+        {{course.name}}
+    </li>
+</ul>
