@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
+
 @Injectable({
   providedIn: 'root'
 })
@@ -26,4 +27,16 @@ export class CourseService {
 
   return this.mydata
  }
+ public callDummyApi()
+ {
+   return this._httpClient.get("http://127.0.0.1:3000/hello")
+ }
+//get users details
+getusersDetails()
+{
+
+  return this._httpClient.get("http://127.0.0.1:3000/getUserDetails")
+}
+
+
 }
